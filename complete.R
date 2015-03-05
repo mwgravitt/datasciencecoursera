@@ -2,9 +2,9 @@
 complete <- function(directory, id = 1:332) {
   
   my_result <- data.frame(id=numeric(),
-                           nobs=numeric(),
-                           stringsAsFactors=FALSE) 
- 
+                          nobs=numeric(),
+                          stringsAsFactors=FALSE) 
+  
   for (i in id){
     filename <- i
     
@@ -24,5 +24,5 @@ complete <- function(directory, id = 1:332) {
   names(my_result)[1]<-paste("id")
   names(my_result)[2]<-paste("nobs")
   
-  print (my_result)
+  return (my_result)
 }
